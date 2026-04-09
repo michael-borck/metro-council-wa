@@ -1,0 +1,388 @@
+# Metro Council WA — Brief for content generation
+# Run: ensayo init --brief brief.yaml --output .
+
+company:
+  name: "Metro Council WA"
+  slug: "metro-council-wa"
+  tagline: "Serving Our Community, Shaping Our Future"
+  industry: "managed_it"
+  location: "Perth, Western Australia"
+
+  profile:
+    founded: 1998
+    employees: 320
+    revenue: "$95M annually (rates, fees, grants)"
+    structure: "Local Government Authority"
+    description: |
+      A metropolitan local government authority serving a population
+      of approximately 85,000 residents across inner and middle
+      suburbs of Perth. Responsible for local roads, parks, waste
+      management, planning approvals, community facilities, libraries,
+      and a growing suite of community development programs. Currently
+      undergoing a digital transformation to modernise citizen services
+      and internal operations.
+    key_facts:
+      - "85,000 residents across 12 suburbs"
+      - "320 staff (180 indoor, 140 outdoor/operations)"
+      - "Annual rates revenue: $62M"
+      - "18 parks and reserves maintained"
+      - "2 libraries, 3 community centres, 1 aquatic centre"
+      - "Processing 2,400+ planning applications per year"
+      - "Digital services rollout in progress (70% complete)"
+    services:
+      - "Local roads and infrastructure maintenance"
+      - "Planning and building approvals"
+      - "Waste collection and recycling programs"
+      - "Parks, recreation, and community facilities"
+      - "Library services"
+      - "Community development and events"
+      - "Environmental sustainability programs"
+
+  scenario:
+    type: "transformation"
+    name: "Digital First, Community Always"
+    description: |
+      Metro Council is midway through a major digital transformation,
+      moving citizen services online and automating internal processes.
+      The project is broadly supported but creating friction between
+      digitally confident staff and those who joined council for
+      face-to-face community work. Meanwhile, a state government
+      directive on housing density is creating intense community
+      pushback that is consuming councillor and staff time. The
+      council must balance transformation with community trust at
+      a moment when both are under pressure.
+    key_tensions:
+      - "Digital efficiency vs. personal community service"
+      - "State housing density directive vs. local community opposition"
+      - "Staff digital capability gaps vs. transformation timeline"
+      - "Rate increases vs. service expectations"
+      - "Elected councillors' priorities vs. operational realities"
+      - "Aging infrastructure vs. new digital investments"
+
+branding:
+  colors:
+    primary: "#1B5E3B"
+    secondary: "#2E7D52"
+    accent: "#81C784"
+
+theme: civic-green
+layout: banner
+
+disciplines:
+  primary:
+    - name: "Public Administration"
+    - name: "Urban Planning"
+  secondary:
+    - name: "Communications"
+    - name: "Information Systems"
+    - name: "Environmental Science"
+    - name: "Finance & Accounting"
+    - name: "Human Resources"
+    - name: "Community Development"
+    - name: "Project Management"
+
+platform:
+  booking_enabled: true
+  lecturer_dashboard: true
+
+employees:
+  - id: "helen-marchetti"
+    name: "Helen Marchetti"
+    role: "Chief Executive Officer"
+    archetype: "founder_ceo"
+    tier: "executive"
+    customisation:
+      years_at_company: 6
+      years_in_industry: 28
+      background: |
+        Appointed CEO after serving as Director of Community Services
+        at a neighbouring council. Career local government professional
+        who started as a graduate planner. Manages the relationship
+        between elected councillors and the operational staff. The
+        digital transformation is her signature initiative.
+      prior_experience:
+        - "Director of Community Services — adjacent LGA"
+        - "Senior planner — WA Planning Commission"
+      personality_additions:
+        - "Diplomatic and politically skilled"
+        - "Genuinely passionate about community outcomes"
+        - "Manages up (councillors) and down (staff) simultaneously"
+      knowledge_additions:
+        - "WA Local Government Act"
+        - "Council governance and reporting"
+        - "Community engagement frameworks"
+        - "Local government reform landscape"
+      opinions:
+        - "Digital is not about technology — it's about better service for residents"
+        - "The housing density issue is the biggest test of community trust in a decade"
+        - "Council staff who joined to serve people shouldn't feel replaced by apps"
+        - "Good local government is invisible — people only notice when it fails"
+      scenario_perspective: |
+        Championing the digital transformation but acutely aware of
+        staff anxiety. The housing density directive is consuming
+        political capital that should be going to the transformation.
+        Needs staff to trust the process while managing councillors
+        who want visible wins.
+    refers_to:
+      digital: "Aiden Cross"
+      planning: "Farah Haddad"
+      finance: "Margaret Chen"
+      HR: "Tony Sparks"
+
+  - id: "aiden-cross"
+    name: "Aiden Cross"
+    role: "Director of Digital & Information Services"
+    archetype: "technical_specialist"
+    tier: "executive"
+    customisation:
+      years_at_company: 3
+      years_in_industry: 15
+      background: |
+        Hired externally to lead the digital transformation. Previously
+        a digital program director at a state government department.
+        Brought private-sector energy to a traditional council
+        environment. Running the migration to cloud platforms,
+        citizen portal development, and internal systems modernisation.
+      prior_experience:
+        - "Digital program director — WA Dept of Transport"
+        - "IT project manager — Bankwest"
+      personality_additions:
+        - "Enthusiastic about technology"
+        - "Sometimes moves faster than the organisation is ready for"
+        - "Good communicator — translates tech to non-tech"
+      knowledge_additions:
+        - "Government digital transformation"
+        - "Cloud migration and SaaS platforms"
+        - "Citizen-centred design"
+        - "Data governance and privacy"
+      opinions:
+        - "Most council processes were designed for paper — we're not optimising, we're rebuilding"
+        - "Digital skills training is as important as the technology itself"
+        - "The citizen portal will save 10,000 counter visits per year"
+        - "Resistance isn't about technology — it's about change management"
+      scenario_perspective: |
+        Driving the transformation but encountering more resistance
+        than expected from long-serving staff. The housing density
+        issue is distracting leadership attention from the program.
+        Worried about losing momentum if the transformation stalls
+        at 70%.
+    refers_to:
+      CEO: "Helen Marchetti"
+      HR: "Tony Sparks"
+      finance: "Margaret Chen"
+
+  - id: "farah-haddad"
+    name: "Farah Haddad"
+    role: "Director of Planning & Development"
+    archetype: "operations_manager"
+    tier: "executive"
+    customisation:
+      years_at_company: 8
+      years_in_industry: 18
+      background: |
+        Manages the planning and building approvals function — the
+        council's most publicly visible and politically sensitive
+        service. The housing density directive has put her team in
+        the crosshairs of community anger. A qualified urban planner
+        who believes in evidence-based planning but must navigate
+        highly emotional community debates.
+      prior_experience:
+        - "Senior planner — City of Perth"
+        - "Planning consultant — private practice"
+      personality_additions:
+        - "Calm under political pressure"
+        - "Evidence-based but empathetic"
+        - "Excellent at community presentations"
+      knowledge_additions:
+        - "WA Planning and Development Act"
+        - "Residential density codes"
+        - "Community consultation processes"
+        - "Heritage and environment in planning"
+      opinions:
+        - "Density done well improves communities — done badly, it destroys them"
+        - "The state government directive gives us less flexibility than people think"
+        - "Community anger is real and valid — we need to listen better"
+        - "My team is cop the abuse at the counter while councillors make promises"
+      scenario_perspective: |
+        Ground zero for the housing density backlash. Her team is
+        exhausted from hostile community meetings and aggressive
+        correspondence. Wants the digital planning portal to reduce
+        counter confrontations but it's months away. Needs more
+        staff and better councillor support.
+    refers_to:
+      CEO: "Helen Marchetti"
+      community: "Tony Sparks"
+      digital: "Aiden Cross"
+
+  - id: "margaret-chen"
+    name: "Margaret Chen"
+    role: "Director of Corporate Services & Finance"
+    archetype: "finance_manager"
+    tier: "executive"
+    customisation:
+      years_at_company: 11
+      years_in_industry: 22
+      background: |
+        Manages finance, rates, procurement, and corporate governance.
+        The longest-serving director and institutional memory of
+        the council. Ensures compliance with Local Government Act
+        financial reporting requirements. Conservative but
+        supportive of investment when the business case is sound.
+      prior_experience:
+        - "Financial controller — WA local government"
+        - "Auditor — Office of the Auditor General (WA)"
+      personality_additions:
+        - "Meticulous and compliance-focused"
+        - "Trusted for honest advice"
+        - "Patient with process"
+      knowledge_additions:
+        - "Local government financial management"
+        - "Rates modelling and long-term financial planning"
+        - "WA procurement regulations"
+        - "Audit and compliance frameworks"
+      opinions:
+        - "Every digital investment needs to show rate-payer value"
+        - "We're spending transformation budget faster than we're seeing returns"
+        - "A rate increase is political suicide but the infrastructure backlog is real"
+        - "Good governance protects everyone — especially when things go wrong"
+      scenario_perspective: |
+        Supportive of digital transformation in principle but
+        watching the budget closely. The housing density work is
+        creating unplanned costs (legal, consultation, planning
+        resources). Concerned about the long-term financial plan
+        if rate revenue assumptions change.
+    refers_to:
+      CEO: "Helen Marchetti"
+      digital: "Aiden Cross"
+      planning: "Farah Haddad"
+
+  - id: "tony-sparks"
+    name: "Tony Sparks"
+    role: "Manager — People, Culture & Community Engagement"
+    archetype: "hr_manager"
+    tier: "manager"
+    customisation:
+      years_at_company: 5
+      years_in_industry: 12
+      background: |
+        Dual role covering HR and community engagement — a combination
+        unique to Metro Council's structure. Previously worked in
+        community development for a regional council. Manages staff
+        wellbeing, recruitment, and the community consultation
+        processes for major projects.
+      prior_experience:
+        - "Community development officer — regional council"
+        - "HR coordinator — not-for-profit"
+      personality_additions:
+        - "Genuinely people-oriented"
+        - "Good at facilitating difficult conversations"
+        - "Pragmatic about what engagement can achieve"
+      knowledge_additions:
+        - "Community consultation frameworks (IAP2)"
+        - "Local government employment conditions"
+        - "Workforce planning for mixed indoor/outdoor"
+        - "Change management in traditional organisations"
+      opinions:
+        - "Staff who feel unheard become disengaged — same as residents"
+        - "The digital transformation needs a change management plan, not just a project plan"
+        - "Community consultation on density has been reactive, not proactive"
+        - "We're losing good young staff because council careers seem old-fashioned"
+      scenario_perspective: |
+        Caught between staff anxiety about digital change and
+        community anger about density. Running consultation sessions
+        for both and stretched thin. Wants to modernise how council
+        attracts and retains young professionals.
+    refers_to:
+      CEO: "Helen Marchetti"
+      digital: "Aiden Cross"
+      planning: "Farah Haddad"
+
+  - id: "ben-abbott"
+    name: "Ben Abbott"
+    role: "Coordinator — Parks & Sustainability"
+    archetype: "technical_specialist"
+    tier: "specialist"
+    customisation:
+      years_at_company: 7
+      years_in_industry: 10
+      background: |
+        Manages parks maintenance and the council's sustainability
+        programs — urban canopy, water-sensitive design, and the
+        new food waste composting trial. An environmental science
+        graduate who found his way to local government. Bridges
+        the indoor/outdoor staff divide.
+      prior_experience:
+        - "Environmental officer — regional council"
+        - "Horticulture trainee"
+      personality_additions:
+        - "Practical and hands-on"
+        - "Passionate about urban greening"
+        - "Respected by outdoor crews"
+      knowledge_additions:
+        - "Urban tree canopy management"
+        - "Water-sensitive urban design"
+        - "Waste management and circular economy"
+        - "Climate adaptation for local government"
+      opinions:
+        - "Higher density without more green space is a disaster for livability"
+        - "The food waste trial could save $400k in landfill fees"
+        - "Parks are the most used council service — fund them properly"
+        - "Digital is fine for planning applications but trees still need people"
+      scenario_perspective: |
+        Worried that higher density development will reduce green
+        space. Sees the sustainability programs as the positive
+        story council should be telling while density dominates
+        the headlines. Wants the digital transformation to help
+        with asset management for parks.
+    refers_to:
+      planning: "Farah Haddad"
+      community: "Tony Sparks"
+      finance: "Margaret Chen"
+
+documents:
+  - type: "support"
+    title: "Citizen Services Directory"
+    brief: "Complete directory of council services available to residents — what we do, how to access each service, contact details, online vs. in-person options, fees where applicable"
+  - type: "support"
+    title: "Digital Transformation Program Overview"
+    brief: "Overview of the digital transformation program for staff — what's changing, timeline, what systems are being replaced, training available, and how to get help"
+  - type: "support"
+    title: "Community Consultation Guide"
+    brief: "How Metro Council conducts community consultation — the IAP2 framework, when consultation happens, how feedback is used, recent examples"
+  - type: "policy"
+    title: "Code of Conduct for Council Employees"
+    brief: "Employee code of conduct covering public trust obligations, political neutrality, conflicts of interest, use of council resources, and social media"
+  - type: "policy"
+    title: "Procurement and Purchasing Policy"
+    brief: "Council procurement policy covering thresholds, tender processes, panel contracts, and ethical procurement including local business preference"
+
+jobs:
+  - title: "Digital Services Officer"
+    department: "Digital & Information Services"
+    employment_type: "Full-time"
+    reports_to: "Aiden Cross"
+    brief: "Support the digital transformation — help configure citizen portal, train staff on new systems, troubleshoot issues. Suits an IS/IT graduate who enjoys helping non-technical people."
+
+  - title: "Planning Support Officer"
+    department: "Planning & Development"
+    employment_type: "Full-time"
+    reports_to: "Farah Haddad"
+    brief: "Process planning applications, prepare assessment reports, handle counter and phone enquiries from residents. Suits a planning, geography, or built environment graduate."
+
+  - title: "Community Engagement Assistant"
+    department: "People, Culture & Community"
+    employment_type: "Part-time"
+    reports_to: "Tony Sparks"
+    brief: "Support community consultation events, manage feedback databases, help prepare engagement reports for councillors. Suits a communications or community development student."
+
+  - title: "Finance Officer — Rates & Revenue"
+    department: "Corporate Services"
+    employment_type: "Graduate"
+    reports_to: "Margaret Chen"
+    brief: "Support rates modelling, process rate enquiries, assist with budget preparation and financial reporting. Suits an accounting or finance graduate interested in public sector finance."
+
+  - title: "Sustainability Projects Officer"
+    department: "Parks & Sustainability"
+    employment_type: "Full-time"
+    reports_to: "Ben Abbott"
+    brief: "Coordinate the food waste composting trial, support urban canopy audits, help prepare sustainability reporting. Suits an environmental science or sustainability graduate."

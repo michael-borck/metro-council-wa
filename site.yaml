@@ -1,0 +1,19 @@
+branding:
+  accent: '#81C784'
+  primary: '#1B5E3B'
+  secondary: '#2E7D52'
+careers:
+  label: Current Vacancies
+  show_apply_form: true
+  submit_url: ''
+chatbot:
+  booking_api: ''
+  booking_enabled: true
+  mode: llm
+  platform: anythingllm
+company:
+  name: Metro Council WA
+  slug: metro-council-wa
+  tagline: Serving Our Community, Shaping Our Future
+layout: banner
+theme: civic-green
