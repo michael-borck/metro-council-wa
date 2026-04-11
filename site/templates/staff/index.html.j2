@@ -1,0 +1,42 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff portal — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">Staff portal / Internal</p>
+            <h1 style="max-width: 18ch;">Welcome <span class="accent">back.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">Quick links to the systems and people you work with every day.</p>
+        </div>
+    </div>
+</section>
+
+<section class="actions-section">
+    <div class="wrap">
+        <div class="actions-grid">
+            <a href="/staff/directory.html" class="action">
+                <div class="action-icon">P</div>
+                <div class="action-title">Staff directory</div>
+                <div class="action-meta">Find a colleague</div>
+            </a>
+            <a href="/staff/documents.html" class="action">
+                <div class="action-icon">D</div>
+                <div class="action-title">Documents</div>
+                <div class="action-meta">Policies and guides</div>
+            </a>
+            <a href="#" class="action">
+                <div class="action-icon">$</div>
+                <div class="action-title">Payslips and leave</div>
+                <div class="action-meta">HR self-service</div>
+            </a>
+            <a href="#" class="action">
+                <div class="action-icon">▣</div>
+                <div class="action-title">Service request system</div>
+                <div class="action-meta">Open / assigned / closed</div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

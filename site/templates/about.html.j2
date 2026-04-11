@@ -1,0 +1,92 @@
+{% extends "base.html.j2" %}
+
+{% block title %}About — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">About the council</p>
+            <h1 style="max-width: 18ch;">A council for <span class="accent">85,000 people.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">{{ (profile.description or "")|trim }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="facts-bar">
+    <div class="facts-grid">
+        <div class="fact">
+            <div class="fact-num">85,000<span class="unit">residents</span></div>
+            <div class="fact-label">12 suburbs / 4 wards</div>
+        </div>
+        <div class="fact">
+            <div class="fact-num">320<span class="unit">staff</span></div>
+            <div class="fact-label">180 indoor / 140 outdoor</div>
+        </div>
+        <div class="fact">
+            <div class="fact-num">$95<span class="unit">m</span></div>
+            <div class="fact-label">Annual revenue</div>
+        </div>
+        <div class="fact">
+            <div class="fact-num">{{ profile.founded or 1998 }}</div>
+            <div class="fact-label">Year established</div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        <div class="section-header">
+            <p class="eyebrow">The council in numbers</p>
+            <h2>What council does, at a glance.</h2>
+            <p class="lead">A small team running a wide range of services for a growing community. These are the things council looks after.</p>
+        </div>
+
+        {% if profile.key_facts %}
+        <div class="notice-grid">
+            {% for fact in profile.key_facts[:6] %}
+            <article class="notice">
+                <span class="notice-tag">Fact {{ loop.index }}</span>
+                <h3 style="font-size: 1.15rem;">{{ fact }}</h3>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="section-pad" style="background: var(--mc-bg-2); border-top: 4px solid var(--mc-text); border-bottom: 4px solid var(--mc-text);">
+    <div class="wrap">
+        <div class="section-header">
+            <p class="eyebrow">Leadership team</p>
+            <h2>The directorate.</h2>
+            <p class="lead">Five directors and a chief executive. Council policy is set by elected members; the directorate is responsible for delivering it.</p>
+        </div>
+
+        <div class="directorate-grid">
+            {% for emp in employees if emp.tier == 'executive' %}
+            <article class="directorate">
+                <div class="directorate-header">
+                    <div class="directorate-avatar">{{ emp.name[0] }}</div>
+                    <div>
+                        <div class="directorate-name">{{ emp.name }}</div>
+                        <div class="directorate-role">{{ emp.role }}</div>
+                    </div>
+                </div>
+                <p class="directorate-bio">{{ (emp.background or "")[:240] }}{% if (emp.background or "")|length > 240 %}…{% endif %}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="have-your-say">
+    <div class="have-your-say-inner">
+        <div>
+            <h2>Want to know what council is <span class="highlight">working on?</span></h2>
+            <p>Three consultations are open right now and the council meeting calendar is published a year in advance. Council decisions are open to the public.</p>
+        </div>
+        <a href="/council.html" class="btn btn-gold btn-arrow have-your-say-btn">Your council</a>
+    </div>
+</section>
+{% endblock %}

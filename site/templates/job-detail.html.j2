@@ -1,0 +1,64 @@
+{% extends "base.html.j2" %}
+
+{% block title %}{{ job.title }} — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow"><a href="/careers.html" style="color: var(--mc-green-2);">← All open positions</a></p>
+            <h1 style="max-width: 22ch;">{{ job.title }}</h1>
+            <p class="hero-tagline" style="max-width: 60ch;">{{ job.brief or job.summary or "" }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="actions-section">
+    <div class="wrap">
+        <div class="notice-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <article class="notice">
+                <span class="notice-tag">Department</span>
+                <h3 style="font-size: 1.15rem;">{{ job.department or "—" }}</h3>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Type</span>
+                <h3 style="font-size: 1.15rem;">{{ job.employment_type or "Full-time" }}</h3>
+            </article>
+            {% if job.reports_to %}
+            <article class="notice">
+                <span class="notice-tag">Reports to</span>
+                <h3 style="font-size: 1.15rem;">{{ job.reports_to }}</h3>
+            </article>
+            {% endif %}
+            <article class="notice">
+                <span class="notice-tag tag-gold">Location</span>
+                <h3 style="font-size: 1.15rem;">Perth WA</h3>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap-narrow">
+        {% if job.description %}
+        <article class="prose">
+            {{ job.description | markdown }}
+        </article>
+        {% endif %}
+    </div>
+</section>
+
+<section class="have-your-say">
+    <div class="have-your-say-inner">
+        <div>
+            <h2>Sound like the right <span class="highlight">role for you?</span></h2>
+            <p>Submit your CV and a short response addressing the selection criteria. We acknowledge every application within two business days and aim to respond on outcome within ten business days.</p>
+        </div>
+        {% if company_url %}
+        <a href="{{ company_url }}" class="btn btn-gold btn-arrow have-your-say-btn">Apply via WorkReady</a>
+        {% else %}
+        <a href="/contact.html" class="btn btn-gold btn-arrow have-your-say-btn">Get in touch</a>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

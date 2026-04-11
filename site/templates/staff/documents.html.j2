@@ -1,0 +1,45 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff documents — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">Staff portal / Documents</p>
+            <h1 style="max-width: 18ch;">Documents and <span class="accent">policies.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">Current versions only. Earlier versions are archived in the records management system.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        {% if docs.support %}
+        <h2 style="margin-bottom: var(--mc-px-4);">Practice guides</h2>
+        <div class="notice-grid">
+            {% for doc in docs.support %}
+            <article class="notice">
+                <span class="notice-tag tag-green">Support</span>
+                <h3 style="font-size: 1.2rem;">{{ doc.get('title', doc.slug.replace('-', ' ').title()) }}</h3>
+                <p>{{ (doc.body or doc.brief or "")[:180] }}{% if (doc.body or doc.brief or "")|length > 180 %}…{% endif %}</p>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if docs.policy %}
+        <h2 style="margin-top: var(--mc-px-8); margin-bottom: var(--mc-px-4);">Policies</h2>
+        <div class="notice-grid">
+            {% for doc in docs.policy %}
+            <article class="notice">
+                <span class="notice-tag tag-gold">Policy</span>
+                <h3 style="font-size: 1.2rem;">{{ doc.get('title', doc.slug.replace('-', ' ').title()) }}</h3>
+                <p>{{ (doc.body or doc.brief or "")[:180] }}{% if (doc.body or doc.brief or "")|length > 180 %}…{% endif %}</p>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

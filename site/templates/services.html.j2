@@ -1,0 +1,113 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Services — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">All council services</p>
+            <h1 style="max-width: 18ch;">Find a <span class="accent">service.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">Everything Metro Council does for residents and businesses, organised by what you might need.</p>
+        </div>
+    </div>
+</section>
+
+<section class="actions-section" aria-labelledby="services-heading">
+    <div class="wrap">
+        <div class="actions-header">
+            <div>
+                <p class="eyebrow">By service area</p>
+                <h2 id="services-heading">Seven things council does.</h2>
+            </div>
+        </div>
+
+        <div class="actions-grid">
+            {% for svc in (profile.services or [])[:8] %}
+            <a href="#" class="action">
+                <div class="action-icon">{{ ['1','2','3','4','5','6','7','8'][loop.index0] }}</div>
+                <div class="action-title">{{ svc }}</div>
+                <div class="action-meta">View options</div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        <div class="section-header">
+            <p class="eyebrow">Quick actions</p>
+            <h2>Common transactions, in plain English.</h2>
+            <p class="lead">Most things you need to do with council can be done online, without phoning or visiting. Here are the most-used services this month.</p>
+        </div>
+
+        <div class="notice-grid">
+            <article class="notice">
+                <span class="notice-tag tag-green">Online</span>
+                <h3>Pay your rates.</h3>
+                <p>Quarterly or annual instalments. Direct debit, credit card, or BPAY. Hardship support available — call us if you need to talk through options.</p>
+                <div class="notice-foot">
+                    <span>Available 24/7</span>
+                    <a href="#">Pay now →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Online</span>
+                <h3>Report a problem.</h3>
+                <p>Pothole, graffiti, fallen tree, broken streetlight, missed bin collection, illegal dumping. Photos and location help us respond faster.</p>
+                <div class="notice-foot">
+                    <span>Average response: 2 days</span>
+                    <a href="#">Report now →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Online</span>
+                <h3>Find your bin day.</h3>
+                <p>Type your address and we'll show your weekly collection days for general waste, recycling, and (where available) food waste. Add to your phone calendar.</p>
+                <div class="notice-foot">
+                    <span>Updated monthly</span>
+                    <a href="#">Check now →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-gold">In person + online</span>
+                <h3>Plan a build or renovation.</h3>
+                <p>Most home renovations need a building permit. Some need planning approval as well. Check the residential design code or talk to our planners before you start.</p>
+                <div class="notice-foot">
+                    <span>By appointment</span>
+                    <a href="#">Start here →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Online</span>
+                <h3>Book a park or hall.</h3>
+                <p>Birthday parties, sports, weddings, community meetings. 18 parks and reserves, 3 community halls, 1 aquatic centre with function rooms.</p>
+                <div class="notice-foot">
+                    <span>Up to 12 months ahead</span>
+                    <a href="#">Browse venues →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag">In person</span>
+                <h3>Library membership.</h3>
+                <p>Free for residents. Books, e-books, audiobooks, kids programs, and free wifi at both branches. Sign up at either library with proof of address.</p>
+                <div class="notice-foot">
+                    <span>2 branches</span>
+                    <a href="#">Library hours →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="have-your-say">
+    <div class="have-your-say-inner">
+        <div>
+            <h2>Can't find what you need?</h2>
+            <p>Call our customer service team on (08) 9000 0000, Monday to Friday 8:30am to 5pm. After-hours emergencies — fallen trees, water leaks, road hazards — call 1800 000 000 anytime.</p>
+        </div>
+        <a href="/contact.html" class="btn btn-gold btn-arrow have-your-say-btn">Contact us</a>
+    </div>
+</section>
+{% endblock %}

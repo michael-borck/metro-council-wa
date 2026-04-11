@@ -1,0 +1,107 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Your Council — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">Your elected council</p>
+            <h1 style="max-width: 18ch;">Have your <span class="accent">say.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">Council meetings, elected members, open consultations, and the decisions being made on your behalf.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        <div class="section-header">
+            <p class="eyebrow">Open consultations</p>
+            <h2>Three things council wants to hear from you about.</h2>
+            <p class="lead">Council decisions are better when residents are part of them. Each consultation has multiple ways to take part — written submissions, online surveys, in-person forums.</p>
+        </div>
+
+        <div class="notice-grid">
+            <article class="notice">
+                <span class="notice-tag tag-gold">Open</span>
+                <h3>Residential density code review.</h3>
+                <p>The state government has released new density guidelines. Council is consulting on how they apply locally — what's protected, what changes, where transition zones sit.</p>
+                <div class="notice-foot">
+                    <span>Closes 15 May</span>
+                    <a href="#">Take part →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-gold">Open</span>
+                <h3>Food waste trial — phase 2 expansion.</h3>
+                <p>Should the food waste collection trial expand to 2,000 households? We want feedback from residents in the proposed expansion zones.</p>
+                <div class="notice-foot">
+                    <span>Closes 22 April</span>
+                    <a href="#">Take part →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-gold">Open</span>
+                <h3>Park upgrade priorities — annual survey.</h3>
+                <p>$2.4M for park upgrades next financial year. Tell us where it should go — playgrounds, dog parks, tree planting, sport facilities, accessibility.</p>
+                <div class="notice-foot">
+                    <span>Closes 30 April</span>
+                    <a href="#">Take part →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="actions-section">
+    <div class="wrap">
+        <div class="actions-header">
+            <div>
+                <p class="eyebrow">Council meetings</p>
+                <h2>How council decisions get made.</h2>
+            </div>
+            <a href="#" class="btn btn-ghost btn-arrow">Past minutes</a>
+        </div>
+
+        <div class="notice-grid">
+            <article class="notice">
+                <span class="notice-tag tag-green">Upcoming</span>
+                <h3>Ordinary council meeting.</h3>
+                <p>Tuesday 22 April, 6:00pm at the Civic Centre. Public gallery seats 60. Public question time 6:00–6:15pm. Agenda available 7 days prior.</p>
+                <div class="notice-foot">
+                    <span>22 April / 6:00pm</span>
+                    <a href="#">Agenda →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Upcoming</span>
+                <h3>Planning committee.</h3>
+                <p>Wednesday 23 April, 5:30pm at the Civic Centre. Major development applications. Speakers must register 24 hours in advance.</p>
+                <div class="notice-foot">
+                    <span>23 April / 5:30pm</span>
+                    <a href="#">Agenda →</a>
+                </div>
+            </article>
+            <article class="notice">
+                <span class="notice-tag">Information</span>
+                <h3>How to address council.</h3>
+                <p>Any resident can speak at public question time or apply to make a deputation on a specific agenda item. Plain language guide available.</p>
+                <div class="notice-foot">
+                    <span>Updated quarterly</span>
+                    <a href="#">Read guide →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="have-your-say">
+    <div class="have-your-say-inner">
+        <div>
+            <h2>Want to talk to your <span class="highlight">councillor?</span></h2>
+            <p>Twelve elected councillors across four wards. Each councillor publishes their contact details and holds monthly community catch-ups. Find yours by suburb on the elected members directory.</p>
+        </div>
+        <a href="/contact.html" class="btn btn-gold btn-arrow have-your-say-btn">Find your ward</a>
+    </div>
+</section>
+{% endblock %}

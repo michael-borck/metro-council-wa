@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us — Metro Council WA</title>
-    <meta name="description" content="Metro Council WA delivers local government services to 85,000 residents across 12 inner and middle Perth suburbs. Pay rates, report issues, apply for permits, find services.">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+{% extends "base.html.j2" %}
 
-    <div class="alert-banner" role="region" aria-label="Service alert">
-        <div class="alert-banner-inner">
-            <span class="alert-banner-tag">Notice</span>
-            <span>Council offices closed Monday 27 April for ANZAC Day. Online services available 24/7.</span>
-            <a href="/services.html">View all services</a>
-        </div>
-    </div>
+{% block title %}Contact us — Metro Council WA{% endblock %}
 
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="brand">
-                <div class="brand-crest">MC</div>
-                <div class="brand-name">
-                    <strong>Metro Council WA</strong>
-                    <span>Local Government / Perth WA</span>
-                </div>
-            </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="/" class="">Home</a>
-                <a href="/services.html" class="">Services</a>
-                <a href="/council.html" class="">Your Council</a>
-                <a href="/about.html" class="">About</a>
-                <a href="/careers.html" class="">Careers</a>
-                <a href="/contact.html" class="nav-cta">Contact us</a>
-            </nav>
-        </div>
-    </header>
-
-    <main id="main">
+{% block content %}
 <section class="hero" style="padding: var(--mc-px-6) 0;">
     <div class="hero-inner" style="grid-template-columns: 1fr;">
         <div>
@@ -124,48 +87,4 @@
         <p style="color: var(--mc-text-muted); font-size: 1.1rem; line-height: 1.75;">Metro Council aims to meet WCAG 2.1 AA accessibility standards. If you have trouble using this site, find content you can't read, or need information in an alternative format (large print, audio, plain language), please contact us by phone or email and we'll get it to you.</p>
     </div>
 </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>Metro Council WA</h3>
-                <p>Delivering local government services to 85,000 residents across 12 suburbs in inner and middle Perth.</p>
-                <p class="footer-acknowledgement">Metro Council WA acknowledges the Whadjuk people of the Noongar nation as the Traditional Custodians of the lands on which we work, and we pay our respects to Elders past and present.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="/services.html">All services</a></li>
-                    <li><a href="/services.html">Pay your rates</a></li>
-                    <li><a href="/services.html">Report an issue</a></li>
-                    <li><a href="/services.html">Planning applications</a></li>
-                    <li><a href="/services.html">Bin collection</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Council</h4>
-                <ul>
-                    <li><a href="/council.html">Elected members</a></li>
-                    <li><a href="/council.html">Meeting calendar</a></li>
-                    <li><a href="/council.html">Have your say</a></li>
-                    <li><a href="/about.html">About council</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>For Staff</h4>
-                <ul>
-                    <li><a href="/staff/">Staff portal</a></li>
-                    <li><a href="/staff/directory.html">Directory</a></li>
-                    <li><a href="/staff/documents.html">Documents</a></li>
-                    <li><a href="/careers.html">Open roles</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Metro Council WA / ABN 00 000 000 000 / WA Local Government Authority</p>
-            <p class="footer-disclaimer">A fictional council, made for a Curtin University internship simulation.</p>
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#fafbf9"/>
+  <rect x="6" y="6" width="52" height="52" fill="#0e3a22" stroke="#131715" stroke-width="3"/>
+  <rect x="9" y="58" width="46" height="3" fill="#c8861a"/>
+  <text x="32" y="42"
+        text-anchor="middle"
+        font-family="'Bricolage Grotesque', 'Public Sans', sans-serif"
+        font-size="26"
+        font-weight="800"
+        fill="#fafbf9">MC</text>
+</svg>

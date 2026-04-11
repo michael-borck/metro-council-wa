@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metro Council WA — Serving Our Community, Shaping Our Future</title>
-    <meta name="description" content="Metro Council WA delivers local government services to 85,000 residents across 12 inner and middle Perth suburbs. Pay rates, report issues, apply for permits, find services.">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+{% extends "base.html.j2" %}
 
-    <div class="alert-banner" role="region" aria-label="Service alert">
-        <div class="alert-banner-inner">
-            <span class="alert-banner-tag">Notice</span>
-            <span>Council offices closed Monday 27 April for ANZAC Day. Online services available 24/7.</span>
-            <a href="/services.html">View all services</a>
-        </div>
-    </div>
+{% block title %}Metro Council WA — Serving Our Community, Shaping Our Future{% endblock %}
 
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="brand">
-                <div class="brand-crest">MC</div>
-                <div class="brand-name">
-                    <strong>Metro Council WA</strong>
-                    <span>Local Government / Perth WA</span>
-                </div>
-            </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="/" class="active">Home</a>
-                <a href="/services.html" class="">Services</a>
-                <a href="/council.html" class="">Your Council</a>
-                <a href="/about.html" class="">About</a>
-                <a href="/careers.html" class="">Careers</a>
-                <a href="/contact.html" class="nav-cta">Contact us</a>
-            </nav>
-        </div>
-    </header>
-
-    <main id="main">
+{% block content %}
 <section class="hero">
     <div class="hero-inner">
         <div>
@@ -48,7 +11,7 @@
                 Your council.<br>
                 <span class="accent">Your services.</span>
             </h1>
-            <p class="hero-tagline">Serving Our Community, Shaping Our Future Find a service, pay your rates, report a problem, or have your say. We're working to make council easier to deal with — online and in person.</p>
+            <p class="hero-tagline">{{ company.tagline or "Serving our community, shaping our future." }} Find a service, pay your rates, report a problem, or have your say. We're working to make council easier to deal with — online and in person.</p>
 
             <div class="hero-search">
                 <label class="hero-search-label" for="site-search">What do you need to do today?</label>
@@ -210,24 +173,15 @@
     <div class="wrap">
         <div class="decision-block">
             <h3>Digital first, community always.</h3>
-            <p>Metro Council is midway through a major digital transformation,
-moving citizen services online and automating internal processes.
-The project is broadly supported but creating friction between
-digitally confident staff and those who joined council for
-face-to-face community work. Meanwhile, a state government
-directive on housing density is creating intense community
-pushback that is consuming councillor and staff time. The
-council must balance transformation with community trust at
-a moment when both are under pressure.</p>
+            <p>{{ (scenario.description or "")|trim }}</p>
 
+            {% if scenario.key_tensions %}
             <ul class="tensions-grid">
-                <li>Digital efficiency vs. personal community service</li>
-                <li>State housing density directive vs. local community opposition</li>
-                <li>Staff digital capability gaps vs. transformation timeline</li>
-                <li>Rate increases vs. service expectations</li>
-                <li>Elected councillors' priorities vs. operational realities</li>
-                <li>Aging infrastructure vs. new digital investments</li>
+                {% for tension in scenario.key_tensions[:6] %}
+                <li>{{ tension }}</li>
+                {% endfor %}
             </ul>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -241,48 +195,4 @@ a moment when both are under pressure.</p>
         <a href="/council.html" class="btn btn-gold btn-arrow have-your-say-btn">View consultations</a>
     </div>
 </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>Metro Council WA</h3>
-                <p>Delivering local government services to 85,000 residents across 12 suburbs in inner and middle Perth.</p>
-                <p class="footer-acknowledgement">Metro Council WA acknowledges the Whadjuk people of the Noongar nation as the Traditional Custodians of the lands on which we work, and we pay our respects to Elders past and present.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="/services.html">All services</a></li>
-                    <li><a href="/services.html">Pay your rates</a></li>
-                    <li><a href="/services.html">Report an issue</a></li>
-                    <li><a href="/services.html">Planning applications</a></li>
-                    <li><a href="/services.html">Bin collection</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Council</h4>
-                <ul>
-                    <li><a href="/council.html">Elected members</a></li>
-                    <li><a href="/council.html">Meeting calendar</a></li>
-                    <li><a href="/council.html">Have your say</a></li>
-                    <li><a href="/about.html">About council</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>For Staff</h4>
-                <ul>
-                    <li><a href="/staff/">Staff portal</a></li>
-                    <li><a href="/staff/directory.html">Directory</a></li>
-                    <li><a href="/staff/documents.html">Documents</a></li>
-                    <li><a href="/careers.html">Open roles</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Metro Council WA / ABN 00 000 000 000 / WA Local Government Authority</p>
-            <p class="footer-disclaimer">A fictional council, made for a Curtin University internship simulation.</p>
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock %}

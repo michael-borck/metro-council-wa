@@ -1,0 +1,69 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Careers — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">Careers / FY26 graduate intake</p>
+            <h1 style="max-width: 18ch;">Work that <span class="accent">matters here.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">320 colleagues running services for 85,000 residents. Career pathways across planning, finance, digital, parks, libraries, community development, and more. We pay properly, we train people, and we mean it about work–life balance.</p>
+        </div>
+    </div>
+</section>
+
+<section class="actions-section">
+    <div class="wrap">
+        <div class="actions-header">
+            <div>
+                <p class="eyebrow">Open positions</p>
+                <h2>{{ jobs|length }} positions open.</h2>
+            </div>
+        </div>
+
+        <div class="notice-grid">
+            {% for job in jobs %}
+            <article class="notice">
+                <span class="notice-tag tag-green">{{ job.employment_type or "Full-time" }}</span>
+                <h3 style="font-size: 1.4rem;">{{ job.title }}</h3>
+                <p style="font-weight: 600; color: var(--mc-green-2); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--mc-px-2);">{{ job.department or "" }}{% if job.reports_to %} / Reports to {{ job.reports_to }}{% endif %}</p>
+                <p>{{ (job.brief or job.summary or "")[:200] }}{% if (job.brief or job.summary or "")|length > 200 %}…{% endif %}</p>
+                <div class="notice-foot">
+                    <span>Perth-based</span>
+                    <a href="/careers/{{ job.slug }}.html">Read role →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        <div class="section-header">
+            <p class="eyebrow">How we hire</p>
+            <h2>Three steps. No surprises.</h2>
+            <p class="lead">Council recruitment is conducted under merit-based principles. Every position is open to all eligible applicants and assessed against the same criteria.</p>
+        </div>
+
+        <div class="notice-grid">
+            <article class="notice">
+                <span class="notice-tag tag-green">Step 1</span>
+                <h3>Apply online.</h3>
+                <p>Submit your CV and a short response addressing the selection criteria. We acknowledge every application within two business days.</p>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Step 2</span>
+                <h3>Panel interview.</h3>
+                <p>A 45-minute interview with the hiring manager and one independent panel member. Plain questions, no role-play, no whiteboard tests.</p>
+            </article>
+            <article class="notice">
+                <span class="notice-tag tag-green">Step 3</span>
+                <h3>References &amp; offer.</h3>
+                <p>Reference checks, then a written offer including salary, allowances, super, study support, and start date. Decisions within ten business days.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

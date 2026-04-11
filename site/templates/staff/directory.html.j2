@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff directory — Metro Council WA{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: var(--mc-px-6) 0;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div>
+            <p class="eyebrow">Staff portal / Directory</p>
+            <h1 style="max-width: 18ch;">Find a <span class="accent">colleague.</span></h1>
+            <p class="hero-tagline" style="max-width: 60ch;">Directorate, managers, and operational leads. Click any name to view their profile and start a conversation.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        <div class="directorate-grid">
+            {% for emp in employees %}
+            <article class="directorate">
+                <div class="directorate-header">
+                    <div class="directorate-avatar">{{ emp.name[0] }}</div>
+                    <div>
+                        <div class="directorate-name">{{ emp.name }}</div>
+                        <div class="directorate-role">{{ emp.role }}</div>
+                    </div>
+                </div>
+                <p class="directorate-bio">{{ (emp.background or "")[:200] }}{% if (emp.background or "")|length > 200 %}…{% endif %}</p>
+                <p class="label" style="margin-top: var(--mc-px-3); padding-top: var(--mc-px-3); border-top: 2px solid var(--mc-line);">Chat assistant — coming soon</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
