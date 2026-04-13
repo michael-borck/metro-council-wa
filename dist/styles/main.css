@@ -1218,6 +1218,22 @@ section {
 }
 
 /* ============================================================
+   APPLY FORM
+   ============================================================ */
+
+.apply-section { padding: var(--mc-px-8) 0; background: var(--mc-bg-2); border-top: var(--mc-border-thin); }
+.apply-form { max-width: 640px; display: grid; gap: var(--mc-px-3); }
+.apply-form label { display: block; font-family: var(--mc-font-body); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mc-text-muted); margin-bottom: var(--mc-px-1); font-weight: 500; }
+.apply-form input, .apply-form textarea { width: 100%; padding: var(--mc-px-3); background: var(--mc-bg); border: var(--mc-border-thin); color: var(--mc-text); font-family: var(--mc-font-body); font-size: 0.95rem; }
+.apply-form input:focus, .apply-form textarea:focus { outline: none; border-color: var(--mc-green-3); box-shadow: 0 0 0 2px rgba(45, 140, 79, 0.2); }
+.apply-form textarea { resize: vertical; min-height: 100px; }
+.apply-form input[type="file"] { padding: var(--mc-px-2); }
+.apply-required { color: var(--mc-green-3); }
+.apply-result { display: none; padding: var(--mc-px-3); margin-top: var(--mc-px-3); font-size: 0.92rem; }
+.apply-result-success { background: rgba(31, 122, 62, 0.15); border: 1px solid var(--mc-success); color: var(--mc-success); }
+.apply-result-error { background: rgba(179, 38, 30, 0.1); border: 1px solid var(--mc-danger); color: var(--mc-danger); }
+
+/* ============================================================
    FOOTER
    ============================================================ */
 
