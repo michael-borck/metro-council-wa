@@ -356,6 +356,29 @@ documents:
     title: "Procurement and Purchasing Policy"
     brief: "Council procurement policy covering thresholds, tender processes, panel contracts, and ethical procurement including local business preference"
 
+task_templates:
+  - title: "Community feedback summary \u2014 park upgrade"
+    difficulty: "easy"
+    discipline: "community"
+    estimated_hours: 3
+    brief: "Summarise community feedback on a proposed park upgrade and surface the top themes for councillors."
+    description: |
+      The council ran a community feedback survey on a proposed upgrade to a local park — 180 responses, mostly free-text. Read through and produce a 1-2 page summary for councillors covering: the top 3-4 themes that came up repeatedly, any minority views worth surfacing, what the community seems to want prioritised, and anything they explicitly don't want. Don't flatten dissent — councillors need to hear it too.
+  - title: "Footpath renewal program \u2014 prioritisation framework"
+    difficulty: "medium"
+    discipline: "planning"
+    estimated_hours: 6
+    brief: "Draft a prioritisation framework for the annual footpath renewal program \u2014 criteria, weights, worked example."
+    description: |
+      The council gets more footpath renewal requests than the annual budget can cover, and at the moment prioritisation is ad hoc. Draft a framework covering: the criteria we should use (condition, safety, usage, equity across suburbs, disability access, etc.), the relative weight each gets, a scoring approach that a council officer can actually apply in 15 minutes, and one worked example on a real-sounding street. The goal is decisions defensible to ratepayers who ask 'why wasn't my street chosen'.
+  - title: "Heritage precinct development \u2014 council report"
+    difficulty: "hard"
+    discipline: "planning"
+    estimated_hours: 8
+    brief: "Draft the council report for a contested development in a heritage precinct \u2014 options, community impact, recommendation."
+    description: |
+      A developer has lodged an application for a 4-storey mixed-use building in the heart of a heritage precinct. The community is split. Draft the council report covering: (1) the application's compliance with the local planning scheme and heritage overlay, (2) the community consultation findings (including the split), (3) 2-3 realistic options (approve, approve with conditions, refuse) with the trade-offs of each, (4) your recommendation and the reasoning. Remember: this report becomes a public document. Anything you write could end up in the paper.
+
 jobs:
   - title: "Digital Services Officer"
     department: "Digital & Information Services"
