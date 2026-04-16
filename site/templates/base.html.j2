@@ -85,5 +85,13 @@
             <p class="footer-disclaimer">A fictional council, made for a Curtin University internship simulation.</p>
         </div>
     </footer>
+{% if chatbot_embed_id %}
+<!-- AnythingLLM hiring desk chatbot -->
+<script
+  data-embed-id="{{ chatbot_embed_id }}"
+  data-base-api-url="{{ chatbot_base_api_url }}"
+  src="{{ chatbot_widget_src }}">
+</script>
+{% endif %}
 </body>
 </html>
