@@ -83,5 +83,8 @@
 {% endblock %}
 
 {% block head_extra %}
-<script src="/scripts/apply.js" defer></script>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://workready.eduserver.au; style-src 'self' 'unsafe-inline'; connect-src https://workready-api.eduserver.au; img-src 'self' data:; base-uri 'self'; form-action 'none'">
+<script src="/scripts/apply.js?v=0.3.0" defer></script>
+<script src="https://workready.eduserver.au/session.js?v=0.3.0"></script>
 {% endblock %}

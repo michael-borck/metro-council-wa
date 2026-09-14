@@ -85,7 +85,7 @@
             <p class="footer-disclaimer">A fictional council, made for a university internship simulation.</p>
         </div>
     </footer>
-{% if chatbot_embed_id %}
+{% if chatbot_embed_id and page not in ['careers', 'staff'] %}
 <!-- AnythingLLM hiring desk chatbot -->
 <script
   data-embed-id="{{ chatbot_embed_id }}"

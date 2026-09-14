@@ -7,7 +7,10 @@
     <meta name="description" content="Metro Council WA delivers local government services to 85,000 residents across 12 inner and middle Perth suburbs. Pay rates, report issues, apply for permits, find services.">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/styles/main.css">
-<script src="/scripts/apply.js" defer></script>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://workready.eduserver.au; style-src 'self' 'unsafe-inline'; connect-src https://workready-api.eduserver.au; img-src 'self' data:; base-uri 'self'; form-action 'none'">
+<script src="/scripts/apply.js?v=0.3.0" defer></script>
+<script src="https://workready.eduserver.au/session.js?v=0.3.0"></script>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -147,7 +150,7 @@
             </div>
             <div>
                 <label for="resume">Resume (PDF) <span class="apply-required">*</span></label>
-                <input type="file" name="resume" id="resume" accept=".pdf" required>
+                <input type="file" name="resume" accept="application/pdf,.pdf" title="PDF resume" id="resume" accept=".pdf" required>
             </div>
             <div>
                 <button type="submit" class="btn btn-primary btn-arrow">Submit application</button>
@@ -199,11 +202,5 @@
             <p class="footer-disclaimer">A fictional council, made for a university internship simulation.</p>
         </div>
     </footer>
-<!-- AnythingLLM hiring desk chatbot -->
-<script
-  data-embed-id="0781ac58-bf3e-4768-b061-fa292f7993b8"
-  data-base-api-url="https://chat.eduserver.au/api/embed"
-  src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
-</script>
 </body>
 </html>
